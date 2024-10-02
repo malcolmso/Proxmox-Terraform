@@ -8,6 +8,9 @@ terraform plan -var-file="credentials.auto.tfvars"
 #apply
 terraform apply -var-file="credentials.auto.tfvars"
 
+#apply auto approve
+terraform apply -var-file="credentials.auto.tfvars" -auto-approve
+
 #save the plan
 terraform plan -out="proxmox_plan" -var-file="credentials.auto.tfvars"
 
