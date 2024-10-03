@@ -1,6 +1,9 @@
 # Proxmox-Terraform
 
-Terraform init
+Terraform commands
+
+#init
+terraform init
 
 #plan
 terraform plan -var-file="credentials.auto.tfvars"
@@ -16,6 +19,9 @@ terraform plan -out="proxmox_plan" -var-file="credentials.auto.tfvars"
 
 #apply the save plan
 terraform apply "proxmox_plan"
+
+#destroy
+terraform destroy --auto-approve --var-file="credentials.auto.tfvars"
 
 ======================================================================
 Folder Structure:
