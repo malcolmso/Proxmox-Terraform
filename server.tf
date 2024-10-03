@@ -15,7 +15,7 @@ resource "proxmox_vm_qemu" "server" {
   # Network configuration
   network {
     bridge = "vmbr0"
-    model  = "virtio"  # Corrected from "VirtO (paravirtualized)"
+    model  = "virtio" 
   }
 
   # Disk configuration
@@ -23,7 +23,6 @@ resource "proxmox_vm_qemu" "server" {
     size         = "60G"
     type         = "scsi"
     storage      = "local-lvm"
-    #storage_type = "lvm"  # gives error
     iothread     = 1       # Use 1 instead of true for the number
   }
 }
